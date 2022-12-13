@@ -1,6 +1,7 @@
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 // Loader
 .loader_bg {
@@ -61,14 +62,27 @@
 
 // main codes
 $transition-time:0.5s;
-$card-bg:#016aac;
 
-.pokemonProperty {
-    font-family: 'Schoolbell', cursive;
+// Js classlist add
+.card-bg {
+    background: #016aac;
+}
+
+.choose{
+    background: #016aac;
+    color: white !important; 
 }
 
 .pokemonValue {
     font-family: 'Dancing Script', cursive;
+}
+
+.pokemonValue2 {
+    font-family: 'Schoolbell', cursive;
+}
+
+.pokemonValue3 {
+    font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -79,6 +93,16 @@ $card-bg:#016aac;
 
 body {
     background: #FFCC00;
+}
+
+main img {
+    cursor: pointer;
+    transition: ease-in-out $transition-time;
+
+    &:hover {
+        transform: scale(1.4);
+        z-index: 2;
+    }
 }
 
 // Header
@@ -96,4 +120,84 @@ header {
     background: #e1a306;
     box-shadow: 0 0 5px #e15606;
     padding: 5px 0 !important;
+    transition: $transition-time;
+}
+
+// main
+.pokemon-list {
+    display: flex;
+    gap: 30px;
+}
+
+.cardHover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0%;
+    width: 100%;
+    transition: height 1s ease-out;
+    background: linear-gradient(to top,
+            transparent 0%,
+            #e1a306 -20%,
+            #e1a306 100%);
+    background-size: cover;
+}
+
+.cardHover:hover:before {
+    height: 100%;
+}
+
+.cardHover:hover {
+    .img {
+        z-index: 999 !important;
+    }
+
+    .pokName {
+        z-index: 999 !important;
+        display: block !important;
+        color: #016aac !important;
+    }
+    .card-body , .id{
+        display: none !important;
+    }
+}
+
+// scroll
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #e1a306;
+    height: calc(100vh - 300px);
+
+}
+
+body::-webkit-scrollbar-track {
+    background: #016aac;
+}
+
+//   Backtop
+
+.to-top {
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
