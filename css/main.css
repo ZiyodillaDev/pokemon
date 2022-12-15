@@ -114,7 +114,7 @@ header {
   background: #FFCC00;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 100;
+  z-index: 10000;
   top: 0;
   padding: 1rem 0;
   transition: 0.5s;
@@ -158,6 +158,54 @@ header {
 }
 .cardHover:hover .card-body, .cardHover:hover .id {
   display: none !important;
+}
+
+.renders {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.inputColor {
+  color: #016aac !important;
+  text-align: center;
+}
+
+input::-moz-placeholder {
+  color: yellow !important;
+  text-align: center;
+}
+
+input:-ms-input-placeholder {
+  color: yellow !important;
+  text-align: center;
+}
+
+input::placeholder, select, input:focus, input {
+  color: yellow !important;
+  text-align: center;
+}
+
+.inputBg {
+  background-color: #016aac !important;
+}
+
+option {
+  text-align: center;
+}
+
+input {
+  border: none !important;
+  outline: none !important;
+  border-radius: 25px 0 0 25px !important;
+  transition: 0.5s;
+}
+
+#button-addon2 {
+  position: relative;
+  border-radius: 0 25px 25px 0 !important;
+  background: #e1a306;
+  color: yellow;
 }
 
 body::-webkit-scrollbar {
