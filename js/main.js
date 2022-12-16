@@ -81,18 +81,19 @@ let renderPokemons = (pokemon) => {
     </div>
     `;
 // Searching
-// const search =  document.querySelector("#button-addon2");
-// const searchnput =  document.querySelector(".searchInput");
+const search =  document.querySelector("#button-addon2");
+const searchnput =  document.querySelector(".searchInput");
 
-// search.addEventListener("click",()=>{
-//     if(searchnput.value === i.name){
-//         console.log(true);
-//     }else{
-//         console.log(false);
-//         console.log(searchnput.value);
-//     }
+search.addEventListener("click",()=>{
+   let d = forEach()
+    if(searchnput.value === i.name){
+        console.log(true);
+    }else{
+        console.log(false);
+        console.log(searchnput.value);
+    }
    
-// })
+})
         list.innerHTML = res;
         pokiList.appendChild(list);
         let selected = document.querySelectorAll(".selected");
@@ -206,8 +207,7 @@ pokiSelect1.addEventListener("change",function(){
         };
     }
     else{       
-    //    newArr = 
-       console.log(pokemon.i.name); ; 
+location.reload()
     }
 })
 
