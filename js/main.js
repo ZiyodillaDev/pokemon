@@ -80,20 +80,7 @@ let renderPokemons = (pokemon) => {
     </div>
     </div>
     `;
-// Searching
-const search =  document.querySelector("#button-addon2");
-const searchnput =  document.querySelector(".searchInput");
 
-search.addEventListener("click",()=>{
-   let d = forEach()
-    if(searchnput.value === i.name){
-        console.log(true);
-    }else{
-        console.log(false);
-        console.log(searchnput.value);
-    }
-   
-})
         list.innerHTML = res;
         pokiList.appendChild(list);
         let selected = document.querySelectorAll(".selected");
@@ -104,7 +91,24 @@ search.addEventListener("click",()=>{
     };
 }
 renderPokemons(pokemons);
+///////////// Searching
+///////////// const searchForm =  document.querySelector(".form");
+///////////// const searchInput =  document.querySelector(".input");
 
+///////////// let Arr = [];
+///////////// searchForm.addEventListener("input",(e)=>{
+///////////// e.preventDefault();
+///////////// list.innerHTML = ''
+///////////// let inputValue = searchInput.value.toLocaleLowerCase();
+///////////// pokemons.forEach((el)=>{
+/////////////     if(el.name.toLocaleLowerCase().includes(inputValue)){
+/////////////         Arr.push(el)
+/////////////     }  
+///////////// })
+///////////// renderPokemons(pokemon) ;
+///////////// Arr = [];
+
+//////////// })
 // Category by type
 let pokiSelect1 = document.querySelector("#pokiSelect1");
 let uniqCat = [];
