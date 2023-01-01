@@ -71,7 +71,7 @@
   }
 }
 .card-bg {
-  background: #016aac;
+  background: #e10661;
 }
 
 .choose {
@@ -97,15 +97,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #FFCC00;
+a {
+  text-decoration: none;
 }
 
-main img {
+body {
+  background: #FFCC00;
+  transition: ease-in-out 0.5s;
+}
+
+.card-img-top {
   cursor: pointer;
   transition: ease-in-out 0.5s;
 }
-main img:hover {
+.card-img-top:hover {
   transform: scale(1.4);
   z-index: 2;
 }
@@ -125,6 +130,10 @@ header {
   box-shadow: 0 0 5px #e15606;
   padding: 5px 0 !important;
   transition: 0.5s;
+}
+.navbar-shrink #button-addon2 {
+  background: #ffd900 !important;
+  color: white;
 }
 
 .pokemon-list {
@@ -156,7 +165,8 @@ header {
   display: block !important;
   color: #016aac !important;
 }
-.cardHover:hover .card-body, .cardHover:hover .id {
+.cardHover:hover .card-body,
+.cardHover:hover .id {
   display: none !important;
 }
 
@@ -181,13 +191,17 @@ input:-ms-input-placeholder {
   text-align: center;
 }
 
-input::placeholder, select, input:focus, input {
+input::placeholder,
+select,
+input:focus,
+input {
   color: yellow !important;
   text-align: center;
 }
 
 .inputBg {
   background-color: #016aac !important;
+  cursor: pointer;
 }
 
 option {
@@ -241,4 +255,52 @@ body::-webkit-scrollbar-track {
   bottom: 32px;
   pointer-events: auto;
   opacity: 1;
+}
+
+.mode-btn {
+  padding: 20px 30px;
+  background-color: #016aac !important;
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+
+.dark {
+  background: #016aac;
+}
+
+.bg-yellow {
+  background: #FFCC00 !important;
+}
+
+.bg-yellow2 {
+  color: #e1a306 !important;
+}
+
+.color-white {
+  color: #016aac !important;
+}
+
+.bookmark-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
+  padding: 15px 30px;
+  border-radius: 100px;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #016aac;
+  color: yellow;
+}
+
+.offcanvas {
+  background: rgba(1, 107, 172, 0.9647058824);
+}
+
+@media screen and (max-width: 770px) {
+  .logo {
+    display: none !important;
+  }
 }/*# sourceMappingURL=main.css.map */

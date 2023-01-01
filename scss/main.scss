@@ -65,12 +65,12 @@ $transition-time:0.5s;
 
 // Js classlist add
 .card-bg {
-    background: #016aac;
+ background: #e10661;
 }
 
-.choose{
+.choose {
     background: #016aac;
-    color: white !important; 
+    color: white !important;
 }
 
 .pokemonValue {
@@ -90,12 +90,16 @@ $transition-time:0.5s;
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 body {
     background: #FFCC00;
+    transition: ease-in-out $transition-time;
 }
 
-main img {
+.card-img-top {
     cursor: pointer;
     transition: ease-in-out $transition-time;
 
@@ -116,11 +120,16 @@ header {
     transition: $transition-time;
 }
 
+
 .navbar-shrink {
     background: #e1a306;
     box-shadow: 0 0 5px #e15606;
     padding: 5px 0 !important;
     transition: $transition-time;
+    #button-addon2{
+        background: #ffd900 !important;
+        color: white;
+    }
 }
 
 // main
@@ -159,41 +168,53 @@ header {
         display: block !important;
         color: #016aac !important;
     }
-    .card-body , .id{
+
+    .card-body,
+    .id {
         display: none !important;
     }
 }
-.renders{
+
+.renders {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
-.inputColor{
+
+.inputColor {
     color: #016aac !important;
     text-align: center;
 }
-input::placeholder,select,input:focus,input {
+
+input::placeholder,
+select,
+input:focus,
+input {
     color: yellow !important;
     text-align: center;
 }
 
-.inputBg{
+.inputBg {
     background-color: #016aac !important;
+    cursor: pointer;
 }
-option{
+
+option {
     text-align: center;
 }
-input{
+
+input {
     border: none !important;
     outline: none !important;
     border-radius: 25px 0 0 25px !important;
     transition: .5s;
 }
-#button-addon2{
-position: relative;
-border-radius: 0 25px 25px 0 !important;
-background: #e1a306;
-color: yellow;
+
+#button-addon2 {
+    position: relative;
+    border-radius: 0 25px 25px 0 !important;
+    background: #e1a306;
+    color: yellow;
 }
 
 // scroll
@@ -233,4 +254,56 @@ body::-webkit-scrollbar-track {
     bottom: 32px;
     pointer-events: auto;
     opacity: 1;
+}
+
+// Dark mode
+
+.mode-btn {
+    padding: 20px 30px;
+    background-color: #016aac !important;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+.dark {
+    background: #016aac;
+}
+
+.bg-yellow {
+    background:#FFCC00 !important;
+}
+
+// .bg-blue {}
+
+.bg-yellow2{
+    color: #e1a306 !important;
+}
+
+.color-white{
+    color: #016aac !important ;
+}
+
+.bookmark-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 65px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #016aac;
+    color: yellow;
+}
+
+.offcanvas{
+    background: #016bacf6;
+}
+
+@media screen and (max-width:770px) {
+    .logo{
+        display: none !important;
+    }
 }
